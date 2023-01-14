@@ -1,4 +1,4 @@
-FROM tiltedphoques/st-reborn-server:latest as base
+FROM thakyZ/st-reborn-server:latest as base
 
 FROM alpine:latest as final
 
