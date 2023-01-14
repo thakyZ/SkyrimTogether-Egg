@@ -10,7 +10,7 @@
     "description": "Pterodactyl egg to host SkyrimTogether servers (AKA TiltedEvolution)\r\n\r\nSimply reinstall the server to update to the latest version of this mod. Unfortunately due to technical limitations, this egg will need significant modifications to support playing older versions of the mod.\r\n\r\nDo not use this Egg to create and host servers for profit. Commercial use of the mod is forbidden by the developers.",
     "features": null,
     "docker_images": {
-        "thakyZ\/skyrimtogether-egg:yolk-latest": "thakyZ\/skyrimtogether-egg:yolk-latest",
+        "thakyz\/skyrimtogether-egg:yolk-latest": "thakyz\/skyrimtogether-egg:yolk-latest",
         "ghcr.io\/pteroforge\/debian:11-bullseye": "ghcr.io\/pteroforge\/debian:11-bullseye"
     },
     "file_denylist": [],
@@ -24,7 +24,7 @@
     "scripts": {
         "installation": {
             "script": "#!\/bin\/ash\r\n\r\n# SkyrimTogether Egg Installation Script\r\n# Author: Hayden Andreyka (haydenandreyka@gmail.com)\r\n\r\n# Description: Uses custom installer image that contains SkyrimTogether binaries and copies binaries to mounted persistent folder on Pterodactyl.\r\n# This setup is not ideal but due to the \"creative\" build process of the ST server, it's the most reliable solution possible.\r\n\r\n# Delete existing binaries\r\nif [ -d \"\/mnt\/server\/bin\" ]\r\nthen\r\n    rm -rf \/mnt\/server\/bin\/*\r\nelse\r\n    mkdir -p \/mnt\/server\/bin\r\nfi\r\n# Copy binaries from their home on installer image to the persistent mount point\r\ncp \/home\/server\/* \/mnt\/server\/bin\r\n\r\n# Done!\r\necho \"Done installing. Re-run the installer to update the server.\"",
-            "container": "thakyZ\/skyrimtogether-egg:installer-latest",
+            "container": "thakyz/skyrimtogether-egg:installer-latest",
             "entrypoint": "ash"
         }
     },
