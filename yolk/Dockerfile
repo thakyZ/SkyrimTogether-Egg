@@ -24,8 +24,8 @@ RUN          update-locale lang=en_US.UTF-8 \
 
 WORKDIR     /home/container
 
-RUN         ls ./ -t
-RUN         ls ./../ -t
+RUN         ls ./ -l
+RUN         ls ./../ -l
 
 #COPY        ./../entrypoint.sh /entrypoint.sh
 CMD         [ "/bin/bash", "/entrypoint.sh" ]
