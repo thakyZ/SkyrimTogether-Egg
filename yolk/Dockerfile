@@ -1,4 +1,4 @@
-FROM         debian:bullseye-slim
+FROM         debian:bullseye-stable
 
 LABEL        LABEL author="Torsten Widmann" maintainer="info@goover.de" repository="https://github.com/PteroForge/pterodactyl-images"
 LABEL        LABEL comment="This Dockerfile was copied to https://github.com/Technoguyfication/SkyrimTogether-Egg for archival purposes"
