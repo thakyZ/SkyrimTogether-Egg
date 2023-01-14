@@ -24,6 +24,7 @@ jobs:
         push: true
         tags: thakyz/skyrimtogether-egg:yolk-latest
   build_installer:
+    needs: build_yolk
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
